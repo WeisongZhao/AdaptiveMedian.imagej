@@ -12,17 +12,16 @@
 		<relativePath />
 	</parent>
 
-	<groupId>com.mycompany</groupId>
-	<artifactId>Process_Pixels</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<groupId>com.HIT.weisongzhao</groupId>
+	<artifactId>Adaptive_Median_Filter</artifactId>
+	<version>0.1.0</version>
 
-	<name>Process Pixels</name>
-	<description>A Maven project implementing an ImageJ 1.x plugin.</description>
-	<url>http://mycompany.com/imagej/process-pixels/</url>
-	<inceptionYear>2012</inceptionYear>
+	<name>Adaptive Median Filter</name>
+	<url>https://github.com/WeisongZhao/AdaptiveMedian.imagej</url>
+	<inceptionYear>2019</inceptionYear>
 	<organization>
-		<name>My Company</name>
-		<url>http://mycompany.com/</url>
+		<name>Harbin Institute of Technology</name>
+		<url>http://en.hit.edu.cn/</url>
 	</organization>
 	<licenses>
 		<license>
@@ -33,9 +32,9 @@
 
 	<developers>
 		<developer>
-			<id>ctrueden</id>
-			<name>Curtis Rueden</name>
-			<url>http://imagej.net/User:Rueden</url>
+			<id>weisongzhao</id>
+			<name>Weisong Zhao</name>
+			<url>https://weisongzhao.github.io/</url>
 			<roles>
 				<role>lead</role>
 				<role>developer</role>
@@ -48,36 +47,12 @@
 	</developers>
 	<contributors>
 		<contributor>
-			<name>Johannes Schindelin</name>
-			<url>http://imagej.net/User:Schindelin</url>
-			<roles><role>founder</role></roles>
-			<properties><id>dscho</id></properties>
-		</contributor>
-		<contributor>
-			<name>Olivier Burri</name>
-			<url>http://imagej.net/User:Oburri</url>
-			<properties><id>lacan</id></properties>
-		</contributor>
-		<contributor>
-			<name>Mark Hiner</name>
-			<url>http://imagej.net/User:Hinerm</url>
-			<properties><id>hinerm</id></properties>
-		</contributor>
-		<contributor>
-			<name>Jules Maselbas</name>
-		</contributor>
-		<contributor>
-			<name>Kota Miura</name>
-			<url>http://imagej.net/User:Miura</url>
-			<properties><id>cmci</id></properties>
-		</contributor>
-		<contributor>
-			<name>Yili Zhao</name>
-			<url>http://imagej.net/User:Panovr</url>
-			<properties><id>panovr</id></properties>
+			<name>Weisong Zhao</name>
+			<url>https://weisongzhao.github.io/</url>
+			<roles><role>developer</role></roles>
+			<properties><id>weisongzhao</id></properties>
 		</contributor>
 	</contributors>
-
 	<mailingLists>
 		<mailingList>
 			<name>Image.sc Forum</name>
@@ -86,24 +61,24 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:git://github.com/imagej/example-legacy-plugin</connection>
-		<developerConnection>scm:git:git@github.com:imagej/example-legacy-plugin</developerConnection>
+		<connection>scm:git:git://github.com/WeisongZhao/AdaptiveMedian.imagej</connection>
+		<developerConnection>scm:git:git@github.com:WeisongZhao/AdaptiveMedian.imagej</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/imagej/example-legacy-plugin</url>
+		<url>https://github.com/WeisongZhao/AdaptiveMedian.imagej</url>
 	</scm>
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/imagej/example-legacy-plugin/issues</url>
+		<url>https://github.com/WeisongZhao/AdaptiveMedian.imagej/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>None</system>
 	</ciManagement>
 
 	<properties>
-		<package-name>com.mycompany.imagej</package-name>
-		<main-class>com.mycompany.imagej.Process_Pixels</main-class>
 		<license.licenseName>bsd_2</license.licenseName>
-		<license.copyrightOwners>My Company, Inc.</license.copyrightOwners>
+		<package-name>com.HIT.weisongzhao</package-name>
+		<main-class>com.HIT.weisongzhao.AdaptiveMedian</main-class>
+		<license.copyrightOwners>Weisong Zhao</license.copyrightOwners>
 	</properties>
 
 	<dependencies>
@@ -112,4 +87,5 @@
 			<artifactId>ij</artifactId>
 		</dependency>
 	</dependencies>
+	<description>An adaptive median filter plugin. It filters the pulse intensity with no bluring images. and removes time bar easily.</description>
 </project>

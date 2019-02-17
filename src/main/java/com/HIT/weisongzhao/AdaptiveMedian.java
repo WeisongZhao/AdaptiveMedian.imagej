@@ -1,4 +1,4 @@
-package com.mycompany.imagej;
+package com.HIT.weisongzhao;
 import ij.*;
 
 import ij.gui.GenericDialog;
