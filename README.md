@@ -4,7 +4,7 @@ The pulse pixels exsiting in images because of various reasons, and it happens o
 Also, the uncleaned slides can lead to this problem.
 This plugin will handle this type of problems easily withou any blurring or re-doing experiments.
 ## Installation
-### 1. Add the `Adaptive_Median_Filter-0.1.0.jar` to your imageJ plugin folder as usual and it will show up in `process -> Adaptive median filter`:
+### 1. Add the [Adaptive_Median_Filter-0.1.0.jar](https://github.com/WeisongZhao/AdaptiveMedian.imagej/releases/download/v0.1.0/Adaptive_Median_Filter-0.1.0.jar) to your imageJ plugin folder as usual and it will show up in `process -> Adaptive median filter`:
 <p align='center'>
     <img src='img/1.png' width='200'/>
 </p>
