@@ -28,8 +28,10 @@ This plugin will handle this type of problems easily withou any blurring or re-d
 <p align='center'>
     <img src='img/6.png' width='900'/>
 </p>
+
 # Filtered Result:
 <p align='center'>
     <img src='img/4.png' width='600'/>
 </p>
+
 ## No pulse and no time bar.
