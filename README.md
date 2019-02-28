@@ -1,6 +1,6 @@
 ## Adaptive Median fiter - imageJ plugin
 ## Motivation
-The pulse pixels exsiting in images because of various reasons, and it happens offenly in confocal stype microscopes.
+The pulse pixels exsiting in images because of various reasons （bad pixels）, and it happens offenly in confocal stype microscopes.
 Also, the uncleaned slides can lead to this problem.
 This plugin will handle this type of problems easily withou any blurring or re-doing experiments.
 ## Installation
