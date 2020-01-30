@@ -17,7 +17,7 @@ This plugin will handle this type of problems easily without any blurring or re-
     <img src='img/3.png' width='600'/>
 </p>
 
-#### As the images visualized with imageJ is processed already with histogram equalization, it seems nothing serious to us (red arrows). However, as long as we want to futher process the data, it will influence much to us.</br> 
+#### As the images visualized with imageJ is processed already with histogram equalization, it seems nothing serious to us (red arrows). However, as long as we want to further process the data, it will influence much to us.</br> 
 ### **The saved data:**
 <p align='center'>
     <img src='img/5.png' width='600'/>
@@ -35,6 +35,11 @@ This plugin will handle this type of problems easily without any blurring or re-
     <img src='img/4.png' width='500'/>
 </p>
 
-## Plans
+
+<details>
+<summary><b>Plans</b></summary>
 - The padarray of image edge;
 - The accelerated version of AMF.
+
+</details>
+
