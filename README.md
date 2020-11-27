@@ -39,6 +39,7 @@ This plugin will handle this type of problems easily without any blurring or re-
 
 <details>
 <summary><b>Plans</b></summary>
+
 - The padarray of image edge;
 - The accelerated version of AMF.
 
