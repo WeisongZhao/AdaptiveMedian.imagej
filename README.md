@@ -6,6 +6,15 @@ Confocal type images often exhibit isolated pixels (1×1 ~ 5×5) with extremely 
 Also, the uncleaned slides can lead to this problem.
 
 This plugin will handle this type of problems easily without any blurring or re-doing experiments.
+
+It is a part of publication: 
+
+<p align='center'>
+  <b> <a href="https://www.nature.com/nbt/">Weisong Zhao et al. Extending resolution of structured illumination microscopy with sparse deconvolution, Nature Biotechnology, X, XXX-XXX (2021)</a></b>
+</p>
+
+If you find this plugin useful, please cite our paper.
+
 ## Installation
 ### 1. Add the [Adaptive_Median_Filter-0.1.0.jar](https://github.com/WeisongZhao/AdaptiveMedian.imagej/releases/download/v0.1.0/Adaptive_Median_Filter-0.1.0.jar) to your imageJ plugin folder as usual and it will show up in `process -> Adaptive median filter`:
 <p align='center'>
