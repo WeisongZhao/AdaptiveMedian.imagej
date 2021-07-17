@@ -1,20 +1,23 @@
 package com.HIT.weisongzhao;
-import ij.*;
+import java.awt.AWTEvent;
+import java.util.Arrays;
 
-
-import ij.gui.GenericDialog;
+import ij.IJ;
+import ij.ImageJ;
+import ij.ImagePlus;
+import ij.Macro;
 import ij.gui.DialogListener;
-import ij.process.*;
+import ij.gui.GenericDialog;
 import ij.plugin.filter.ExtendedPlugInFilter;
 import ij.plugin.filter.GaussianBlur;
 import ij.plugin.filter.PlugInFilterRunner;
-import java.awt.*;
-import java.util.Arrays;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
 
 
 public class AdaptiveMedian implements ExtendedPlugInFilter, DialogListener {
     private static int Window = 5; 
-    private static double threshold = 5; 
+    private static double threshold = 2; 
     private final int flags = DOES_ALL|SUPPORTS_MASKING|CONVERT_TO_FLOAT|SNAPSHOT|KEEP_PREVIEW;
     private GaussianBlur gb;
     private int width;
@@ -25,12 +28,14 @@ public class AdaptiveMedian implements ExtendedPlugInFilter, DialogListener {
      * @return Code describing supported formats etc.
      * (see ij.plugin.filter.PlugInFilter & ExtendedPlugInFilter)
      */
-    public int setup(String arg, ImagePlus imp) {
+    @Override
+	public int setup(String arg, ImagePlus imp) {
         return flags;
     }
     
 
-    public void run(ImageProcessor ip) {
+    @Override
+	public void run(ImageProcessor ip) {
         sharpenFloat((FloatProcessor)ip, Window, (float)threshold);
     }
     
@@ -39,7 +44,7 @@ public class AdaptiveMedian implements ExtendedPlugInFilter, DialogListener {
     	width = fp.getWidth();
 		height = fp.getHeight();
     	float[] pixels = (float[])fp.getPixels();
-    	float[] temp = new float[(int) (Window * Window)];
+    	float[] temp = new float[Window * Window];
 		float[] newpix =pixels ;
 		int win = (Window - 1) / 2;
 
@@ -56,14 +61,15 @@ public class AdaptiveMedian implements ExtendedPlugInFilter, DialogListener {
 					Arrays.sort(temp);
 				if ( threshold *temp[(flage ) / 2] <  newpix[(x + y * width)])
 					{
-						pixels[(x + y * width)] = (float) temp[flage/2];
+						pixels[(x + y * width)] = temp[flage/2];
 					}
 				}
 			}
     }
 
     /** Ask the user for the parameters */
-    public int showDialog(ImagePlus imp, String command, PlugInFilterRunner pfr) {
+    @Override
+	public int showDialog(ImagePlus imp, String command, PlugInFilterRunner pfr) {
         String options = Macro.getOptions();
         boolean oldMacro = false;    //for old macros, "gaussian radius" was 2.5 sigma
         if  (options!=null) {
@@ -76,7 +82,7 @@ public class AdaptiveMedian implements ExtendedPlugInFilter, DialogListener {
         Window = Math.abs(Window);
         if (threshold<0) threshold = 0.1;
         gd.addNumericField("Radius", Window, 0, 6, "pixels");
-        gd.addNumericField("Threshold", threshold,1);
+        gd.addNumericField("Threshold", threshold, 1);
         gd.addPreviewCheckbox(pfr);
         gd.addDialogListener(this);
         gd.showDialog();                        //input by the user (or macro) happens here
@@ -86,7 +92,8 @@ public class AdaptiveMedian implements ExtendedPlugInFilter, DialogListener {
         return IJ.setupDialog(imp, flags);      //ask whether to process all slices of stack (if a stack)
     }
 
-    public boolean dialogItemChanged(GenericDialog gd, AWTEvent e) {
+    @Override
+	public boolean dialogItemChanged(GenericDialog gd, AWTEvent e) {
         Window = (int) gd.getNextNumber();
         threshold = gd.getNextNumber();
         if (Window < 0 || threshold < 0  || gd.invalidNumber())
@@ -95,7 +102,8 @@ public class AdaptiveMedian implements ExtendedPlugInFilter, DialogListener {
     }
 
 
-    public void setNPasses(int nPasses) {
+    @Override
+	public void setNPasses(int nPasses) {
         if (gb == null) gb = new GaussianBlur();
         gb.setNPasses(nPasses); 
     }
