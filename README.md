@@ -23,7 +23,7 @@ If you find this plugin useful, please cite our paper.
 
 #### The window and weight to filter the pulse pixels. Radius should be odd `3, 5 or 7`. Threshold should be `2~20`.
 
-#### The Radius `5` and Threshold `2` can be a defalt choice. 
+#### The Radius `5` and Threshold `2` can be a default choice. 
 
 ## Example
 <p align='center'>
