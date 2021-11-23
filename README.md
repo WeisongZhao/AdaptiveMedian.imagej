@@ -10,7 +10,7 @@ This plugin will handle this type of problems easily without any blurring or re-
 It is a part of publication: 
 
 <p align='center'>
-  <b> <a href="https://www.nature.com/nbt/">Weisong Zhao et al. Improving live-cell super-resolution fluorescence microscopy with sparse deconvolution, Nature Biotechnology, X, XXX-XXX (2021)</a></b>
+  <b> <a href="https://doi.org/10.1038/s41587-021-01092-2">Weisong Zhao et al. Sparse deconvolution improves the resolution of live-cell super-resolution fluorescence microscopy, Nature Biotechnology (2021)</a></b>
 </p>
 
 If you find this plugin useful, please cite our paper.
